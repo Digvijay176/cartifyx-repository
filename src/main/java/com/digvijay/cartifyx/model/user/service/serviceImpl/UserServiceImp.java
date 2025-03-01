@@ -25,8 +25,8 @@ public class UserServiceImp implements UserService {
     @Override
     public String saveUser(UserDto userDto){
         UserEntity userEntity = userMapper.toUserEntity(userDto);
+        userEntity.setCreatedWhen(Timestamp.valueOf(LocalDateTime.now()));
         UserEntity user = userRepository.save(userEntity);
-        user.setCreatedWhen(Timestamp.valueOf(LocalDateTime.now()));
         log.info("user save  successfully with id: {}", user.getUserId());
         return user.getUserId().toString();
     }
