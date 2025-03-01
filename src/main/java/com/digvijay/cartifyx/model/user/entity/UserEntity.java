@@ -1,11 +1,13 @@
 package com.digvijay.cartifyx.model.user.entity;
 
+import com.digvijay.cartifyx.comman.constants.UserRole;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+import java.sql.Timestamp;
 import java.util.UUID;
 
 @Entity
@@ -29,7 +31,11 @@ public class UserEntity {
     private String phoneNumber;
 
     @Column(name = "user_role")
-    private String userRole;
+    @Enumerated(EnumType.STRING)
+    private UserRole userRole;
+
+    @Column(name="created_when")
+    private Timestamp createdWhen;
 
     public UserEntity() {
         this.userId = UUID.randomUUID();

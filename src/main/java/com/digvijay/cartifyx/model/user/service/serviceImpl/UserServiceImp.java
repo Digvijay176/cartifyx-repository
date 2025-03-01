@@ -9,6 +9,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+
 @Service
 @Slf4j
 public class UserServiceImp implements UserService {
@@ -22,6 +26,7 @@ public class UserServiceImp implements UserService {
     public String saveUser(UserDto userDto){
         UserEntity userEntity = userMapper.toUserEntity(userDto);
         UserEntity user = userRepository.save(userEntity);
+        user.setCreatedWhen(Timestamp.valueOf(LocalDateTime.now()));
         log.info("user save  successfully with id: {}", user.getUserId());
         return user.getUserId().toString();
     }

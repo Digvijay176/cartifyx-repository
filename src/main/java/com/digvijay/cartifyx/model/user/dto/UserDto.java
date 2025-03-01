@@ -1,6 +1,9 @@
 package com.digvijay.cartifyx.model.user.dto;
 
+import com.digvijay.cartifyx.comman.constants.UserRole;
 import jakarta.persistence.Column;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
@@ -33,5 +36,6 @@ public class UserDto {
     @Pattern(regexp = "^[0-9]{10}$", message = "Contact number must contain exactly 10 digits")
     private String phoneNumber;
 
-    private String userRole;
+    @Enumerated(EnumType.STRING)
+    private UserRole userRole;
 }
