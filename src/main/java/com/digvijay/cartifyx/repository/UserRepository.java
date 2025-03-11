@@ -1,7 +1,6 @@
-package com.digvijay.cartifyx.model.user.repository;
+package com.digvijay.cartifyx.repository;
 
-import com.digvijay.cartifyx.model.user.entity.UserEntity;
-import org.apache.catalina.User;
+import com.digvijay.cartifyx.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;

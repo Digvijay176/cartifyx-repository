@@ -1,4 +1,4 @@
-package com.digvijay.cartifyx.comman.exception;
+package com.digvijay.cartifyx.comman.handler;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

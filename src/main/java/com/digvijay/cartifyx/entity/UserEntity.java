@@ -1,10 +1,9 @@
-package com.digvijay.cartifyx.model.user.entity;
+package com.digvijay.cartifyx.entity;
 
 import com.digvijay.cartifyx.comman.constants.UserRole;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 import java.sql.Timestamp;

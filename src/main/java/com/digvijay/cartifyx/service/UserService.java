@@ -1,6 +1,6 @@
-package com.digvijay.cartifyx.model.user.service;
+package com.digvijay.cartifyx.service;
 
-import com.digvijay.cartifyx.model.user.dto.UserDto;
+import com.digvijay.cartifyx.dto.request.UserDto;
 import org.springframework.stereotype.Service;
 
 @Service

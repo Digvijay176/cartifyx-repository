@@ -1,8 +1,8 @@
-package com.digvijay.cartifyx.model.user.Controller;
+package com.digvijay.cartifyx.controller;
 
-import com.digvijay.cartifyx.comman.exception.ResponseDto;
-import com.digvijay.cartifyx.model.user.dto.UserDto;
-import com.digvijay.cartifyx.model.user.service.UserService;
+import com.digvijay.cartifyx.comman.handler.ResponseDto;
+import com.digvijay.cartifyx.dto.request.UserDto;
+import com.digvijay.cartifyx.service.UserService;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

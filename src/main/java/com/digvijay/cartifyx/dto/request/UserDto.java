@@ -1,10 +1,8 @@
-package com.digvijay.cartifyx.model.user.dto;
+package com.digvijay.cartifyx.dto.request;
 
 import com.digvijay.cartifyx.comman.constants.UserRole;
-import jakarta.persistence.Column;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
-import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
@@ -15,7 +13,6 @@ import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.validator.constraints.UniqueElements;
 
-import java.util.UUID;
 @Slf4j
 @Data
 @NoArgsConstructor

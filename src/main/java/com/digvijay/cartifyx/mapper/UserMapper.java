@@ -1,7 +1,7 @@
-package com.digvijay.cartifyx.model.user.mapper;
+package com.digvijay.cartifyx.mapper;
 
-import com.digvijay.cartifyx.model.user.dto.UserDto;
-import com.digvijay.cartifyx.model.user.entity.UserEntity;
+import com.digvijay.cartifyx.dto.request.UserDto;
+import com.digvijay.cartifyx.entity.UserEntity;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -16,9 +16,7 @@ public class UserMapper {
             user.setUserEmail(userDto.getUserEmail());
             user.setPhoneNumber(userDto.getPhoneNumber());
             user.setUserRole(userDto.getUserRole());
-
             log.info("converted UserDto to UserEntity");
-
             return  user;
     }
 
