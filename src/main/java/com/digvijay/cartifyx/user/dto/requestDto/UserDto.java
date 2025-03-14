@@ -1,4 +1,4 @@
-package com.digvijay.cartifyx.dto.request;
+package com.digvijay.cartifyx.user.dto.requestDto;
 
 import com.digvijay.cartifyx.comman.constants.UserRole;
 import jakarta.persistence.EnumType;

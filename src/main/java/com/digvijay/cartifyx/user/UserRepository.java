@@ -1,6 +1,6 @@
-package com.digvijay.cartifyx.repository;
+package com.digvijay.cartifyx.user;
 
-import com.digvijay.cartifyx.entity.UserEntity;
+import com.digvijay.cartifyx.user.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
