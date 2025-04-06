@@ -32,7 +32,9 @@ public class UserDto {
     @Size(min = 10,max = 10)
     @Pattern(regexp = "^[0-9]{10}$", message = "Contact number must contain exactly 10 digits")
     private String phoneNumber;
+    
+    private String password;
 
     @Enumerated(EnumType.STRING)
-    private UserRole userRole;
+    private UserRole userRole = UserRole.USER_ROLE;
 }

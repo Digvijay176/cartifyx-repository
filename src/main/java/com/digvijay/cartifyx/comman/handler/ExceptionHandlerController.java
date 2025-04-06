@@ -27,7 +27,6 @@ public class ExceptionHandlerController {
             resp.put(fieldName,message);
         });
         String message = resp.toString();
-
         ResponseDto<String> response = new ResponseDto<>();
         response.setMessage(message);
         response.setStatus(HttpStatus.BAD_REQUEST.value());

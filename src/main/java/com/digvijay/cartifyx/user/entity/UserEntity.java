@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -37,8 +38,9 @@ public class UserEntity {
     @Enumerated(EnumType.STRING)
     private UserRole userRole;
 
-    @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-    private List<Address> addressList;
+//    @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+//    private List<Address> addressList;
+    private String password;
 
     @Column(name="created_when")
     private Timestamp createdWhen;
