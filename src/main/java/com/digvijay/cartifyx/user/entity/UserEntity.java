@@ -40,6 +40,7 @@ public class UserEntity {
 
 //    @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 //    private List<Address> addressList;
+
     private String password;
 
     @Column(name="created_when")
