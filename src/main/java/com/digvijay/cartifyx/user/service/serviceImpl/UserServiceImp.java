@@ -33,4 +33,14 @@ public class UserServiceImp implements UserService {
         return null;
     }
 
+    @Override
+    public String registerUser(UserDto request) {
+        UserEntity user = modelMapper.map(request,UserEntity.class);
+        String password = passwordEncoder.encode(request.getPassword());
+        user.setPassword(password);
+        UserEntity savedUser = userRepository.save(user);
+        return "user saved successfully"+savedUser.getUserId();
+    }
+
+
 }

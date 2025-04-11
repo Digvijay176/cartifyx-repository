@@ -8,4 +8,5 @@ public interface UserService {
 
     String saveUser(UserDto userDto);
 
+    String registerUser(UserDto request);
 }

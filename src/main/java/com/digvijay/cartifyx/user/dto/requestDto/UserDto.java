@@ -7,9 +7,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.validator.constraints.UniqueElements;
 
@@ -17,6 +15,8 @@ import org.hibernate.validator.constraints.UniqueElements;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class UserDto {
 
     @NotNull
@@ -26,7 +26,6 @@ public class UserDto {
 
     @Email(message = "Please enter email in proper format!")
     @NotNull(message = "should not be empty")
-    @UniqueElements( message = "Please register with another email !")
     private String userEmail;
 
     @Size(min = 10,max = 10)

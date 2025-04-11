@@ -15,15 +15,19 @@ import java.util.UUID;
 
 @RestController
 @JsonIgnoreProperties
-@RequestMapping("/public/user")
+@RequestMapping("/api/cartifyx")
 public class UserController {
 
     @Autowired
     private UserService userService;
 
-    @PostMapping(value="/addUser",consumes = "application/json", produces = "application/json")
-    public ResponseEntity<ResponseDto<?>> saveUser(@Valid @RequestBody UserDto userDto ){
-        String result = userService.saveUser(userDto);
-        return null;
+    @PostMapping(value = "/register")
+    public ResponseEntity<ResponseDto<?>> registerResponse(@Valid @ModelAttribute UserDto userDto){
+        String message = userService.registerUser(userDto);
+        ResponseDto<UserDto> responseDto = new ResponseDto<UserDto>();
+        responseDto.setData(null);
+        responseDto.setMessage(message);
+        responseDto.setStatus(HttpStatus.ACCEPTED.value());
+        return ResponseEntity.ok().body(responseDto);
     }
 }
